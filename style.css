@@ -1,0 +1,651 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9fafb;
+  }
+  
+  .navbar {
+    background-color: #111827;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: #38bdf8;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #38bdf8;
+  }
+  
+  /* Hamburger Menu */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: #1f2937;
+      flex-direction: column;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+  
+    .nav-links.open {
+      max-height: 200px;
+      padding: 10px 0;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  .hero {
+    background: linear-gradient(to right, #0f1625, #03070c);
+    color: white;
+    padding: 100px 0;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+  }
+  
+  .cta-btn {
+    background-color: #38bdf8;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background-color: #0ea5e9;
+  }
+  
+  .hero-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .hero-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    /* border-radius: 12px; */
+  }
+  
+  .hero-image video::-webkit-media-controls {
+    display: none !important;
+  }
+  
+  .hero-image video::-moz-media-controls {
+    display: none !important;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .hero-text h1 {
+      font-size: 32px;
+    }
+  
+    .hero-text p {
+      font-size: 16px;
+    }
+  
+    .hero-image {
+      min-width: 100%;
+      margin-top: 20px;
+    }
+  }
+  
+
+
+
+
+
+
+  .services {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1f2937;
+    font-weight: 700;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-top: 40px;
+  }
+  
+  .service-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-card h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #1f2937;
+  }
+  
+  .service-card p {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .service-icon {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;  /* تضمن أن الصورة تغطي المساحة بالكامل */
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .service-card:hover .service-icon {
+    transform: scale(1.1);
+  }
+  
+  .cta-btn {
+    background-color: #38bdf8;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .cta-btn:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-3px);
+  }
+  
+  .cta-btn:active {
+    transform: translateY(1px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  .about-us {
+    background: #f4f7fc;
+    padding: 80px 0;
+    color: #333;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+  }
+  
+  .about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0f1625;
+  }
+  
+  .about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .about-text strong {
+    font-weight: bold;
+    color: #0f1625;
+  }
+  
+  .about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .about-text h2 {
+      font-size: 30px;
+    }
+  
+    .about-text p {
+      font-size: 16px;
+    }
+  
+    .about-image {
+      margin-top: 20px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+ /* Section style */
+.why-choose-us-section {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+}
+
+.why-choose-us-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  width: 100%; 
+
+
+}
+
+/* .why-choose-us-section p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  width: 100%;
+} */
+
+.reasons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.reason {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;  /* العرض 48% للأجهزة الكبيرة */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.reason h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.reason p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.reason:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* على الشاشات الصغيرة الـ h2 و الـ p هياخدوا العرض الكامل */
+  .why-choose-us-section h2, .why-choose-us-section p {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* الـ reason هيكون تحت بعض على الشاشات الصغيرة */
+  .reason {
+    width: 100%;  /* كل reason هيكون تحت بعض */
+    margin-bottom: 20px;
+  }
+
+  /* تقليل حجم الخط في الشاشات الصغيرة */
+  .why-choose-us-section h2 {
+    font-size: 2rem;
+  }
+
+  .why-choose-us-section p {
+    font-size: 1rem;
+  }
+}
+
+
+  
+
+
+
+
+
+
+/* تخصيص الفورم */
+.contact-form-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+  }
+  
+  .contact-form-section .container {
+    display: flex;
+    flex-direction: column; /* جعل العنوان والفورم يظهروا عمودي */
+    align-items: center; /* توسيط العنوان والفورم */
+    justify-content: center; /* ضبط العناصر بشكل صحيح في المنتصف */
+    padding: 20px;
+  }
+  
+  .contact-form-section h2 {
+    text-align: center; /* لتوسيط العنوان */
+    margin-bottom: 20px;
+    font-size: 2rem; /* تحديد حجم الخط للعنوان */
+    font-weight: bold;
+    color: #333;
+    width: 100%; /* العرض الكامل للعنوان */
+  }
+  
+  .contact-form-section .contact-form {
+    display: flex;
+    flex-wrap: wrap; /* لجعل الحقول تظهر جنب بعض */
+    gap: 20px; /* مسافة بين الحقول */
+    width: 100%;
+    max-width: 1000px; /* أقصى عرض للفورم */
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form-section .form-group {
+    flex: 1 1 45%; /* الحقول تكون بنسبة 45% من العرض */
+    margin-bottom: 15px;
+  }
+  
+  .contact-form-section label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form-section input, .contact-form-section select, .contact-form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none; /* إزالة البوردر الكامل */
+    border-bottom: 1px solid #ccc; /* إضافة بوردر سفلي */
+    box-sizing: border-box;
+  }
+  
+  /* تخصيص القوائم المنسدلة */
+  .contact-form-section select {
+    font-size: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 25px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"%3E%3Cpath fill="none" stroke="black" stroke-width="2" d="M3 6l4 4 4-4"%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+  }
+  
+  .contact-form-section option {
+    font-size: 1rem;
+  }
+  
+  /* تخصيص المساحة لحقول النص */
+  .contact-form-section .full-width {
+    flex: 1 1 100%; /* الحقل الذي يستحوذ على العرض بالكامل */
+  }
+  
+  .contact-form-section button.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%; /* جعل الزر بأخذ العرض الكامل */
+    margin-top: 10px;
+  }
+  
+  .contact-form-section button.submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* تخصيص التفاعل مع الشاشات المختلفة */
+  @media (max-width: 768px) {
+    .contact-form-section .contact-form {
+      flex-direction: column; /* جعل الحقول تظهر بشكل عمودي في الشاشات الصغيرة */
+    }
+  
+    .contact-form-section .form-group {
+      flex: 1 1 100%; /* جعل الحقول تأخذ العرض بالكامل */
+    }
+  
+    .contact-form-section option {
+      font-size: 1rem;
+    }
+  }
+  
+  /* إزالة البوردر عند التركيز على الحقول */
+  .contact-form-section input:focus, 
+  .contact-form-section select:focus, 
+  .contact-form-section textarea:focus {
+    outline: none; /* إزالة البوردر الافتراضي */
+    border-bottom: 1px solid #ccc; /* الحفاظ على البوردر السفلي */
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* تخصيص الفوتر */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-text {
+    margin-bottom: 20px;
+  }
+  
+  .footer-text p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin: 0;
+  }
+  
+  .footer-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .footer-icons .social-icon {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-icons .social-icon:hover {
+    color: #007bff;
+    transform: scale(1.1);
+  }
+  
+  /* تخصيص الأيقونات في الفوتر */
+  .footer-icons .social-icon i {
+    font-size: 1rem;
+  }
+  
