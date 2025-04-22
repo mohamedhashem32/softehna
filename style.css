@@ -396,12 +396,6 @@
 
 }
 
-/* .why-choose-us-section p {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  width: 100%;
-} */
 
 .reasons {
   display: flex;
@@ -433,6 +427,14 @@
 .reason:hover {
   transform: translateY(-5px);
 }
+
+
+.reason-icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
